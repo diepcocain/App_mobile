@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/shop_page_nav_bar.dart';
+import '../components/my_orders_nav_bar.dart';
 
-class ShopPage extends StatefulWidget {
-  const ShopPage({super.key});
+class MyCart extends StatefulWidget {
+  const MyCart({super.key});
 
   @override
-  State<ShopPage> createState() => _ShopPageState();
+  State<MyCart> createState() => _MyCartState();
 }
 
-class _ShopPageState extends State<ShopPage> {
+class _MyCartState extends State<MyCart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,10 +18,29 @@ class _ShopPageState extends State<ShopPage> {
           Expanded(
             child: ListView(
               children: [
+                // back home
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 15),
+                        child: Icon(
+                          Icons.arrow_back_ios,
+                          color: Colors.black,
+                          size: 28,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 // image
                 Image.asset(
                   'assets/images/img_oder.png',
-                  height: 300,
+                  height: 320,
                 ),
 
                 const Center(
@@ -89,7 +108,7 @@ class _ShopPageState extends State<ShopPage> {
           ),
         ],
       ),
-      bottomNavigationBar: const ShopPageNavBar(),
+      bottomNavigationBar: const MyOrdersNavBar(),
     );
   }
 }

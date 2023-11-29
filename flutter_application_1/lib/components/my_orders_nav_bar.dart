@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ShopPageNavBar extends StatelessWidget {
-  const ShopPageNavBar({super.key});
+class MyOrdersNavBar extends StatelessWidget {
+  const MyOrdersNavBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
       child: SizedBox(
-        height: 180,
+        height: 190,
         child: Column(
           children: [
             Expanded(

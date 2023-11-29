@@ -1,5 +1,6 @@
-// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/drawer.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,12 +14,22 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF8F5F2),
+      appBar: AppBar(
+        title: Text(
+          "Food Man",
+          style: GoogleFonts.dmSerifDisplay(
+            fontSize: 24,
+          ),
+        ),
+        backgroundColor: Colors.grey[700],
+      ),
+      drawer: const MyDrawer(),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 16, bottom: 24),
+              padding: const EdgeInsets.only(top: 14, bottom: 24),
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
@@ -71,12 +82,12 @@ class _HomePageState extends State<HomePage> {
                             child: const Icon(
                               Icons.notifications_none,
                               color: Colors.white,
-                              size: 16,
+                              size: 14,
                             ),
                           ),
                         ),
                         Positioned(
-                          bottom: -2.2,
+                          bottom: -3,
                           right: 0,
                           child: Container(
                             height: 14,
@@ -329,28 +340,6 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Positioned(
-                        top: 16,
-                        right: 16,
-                        child: Container(
-                          height: 32,
-                          width: 32,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16),
-                            color: Colors.white,
-                          ),
-                          child: Center(
-                            child: InkWell(
-                              onTap: () {},
-                              child: const Icon(
-                                Icons.favorite_border,
-                                color: Color(0xFF1D2D50),
-                                size: 26,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
                         bottom: 8,
                         left: 16,
                         right: 16,
@@ -395,8 +384,7 @@ class _HomePageState extends State<HomePage> {
                                               fontSize: 12,
                                               fontWeight: FontWeight.w400,
                                               letterSpacing: -0.2399999946,
-                                              color: Color.fromARGB(
-                                                  255, 138, 133, 133),
+                                              color: Color(0xffc9c9c9),
                                             ),
                                           ),
                                           Positioned(
@@ -480,6 +468,10 @@ List<FoodEntity> foods = [
   FoodEntity(
     foodName: "Pizza",
     image: "assets/images/img_pizza.png",
+  ),
+  FoodEntity(
+    foodName: "Noodle",
+    image: "assets/images/img_hotdog_pizza.png",
   ),
   FoodEntity(
     foodName: "Noodle",
