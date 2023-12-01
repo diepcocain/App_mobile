@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                   // Nhập Mật khẩu
                   MyTextField(
                     controller: passwordTextController,
-                    hintText: 'Mật khẩu',
+                    hintText: 'Password',
                     obscureText: true,
                   ),
       
@@ -102,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
       
                   MyButtonLogin(
                     onTap: signIn,
-                    text: 'Đăng Nhập',
+                    text: 'Sign In',
                   ),
       
                   const SizedBox(height: 20),
@@ -111,7 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Quên mật khẩu?",
+                        "Not a member?",
                         style: TextStyle(
                           color: Colors.grey[700],
                           fontSize: 18,
@@ -121,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
                       GestureDetector(
                         onTap: widget.onTap,
                         child: const Text(
-                          "Đăng ký",
+                          "Register now",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.blue,
