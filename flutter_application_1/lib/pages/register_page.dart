@@ -31,7 +31,7 @@ class _RegisterPageState extends State<RegisterPage> {
     if (passwordTextController.text != confirmPasswordTextController.text) {
       Navigator.pop(context);
       // Hiển thị thông báo lỗi
-      displayMessage("Passwords don't match!");
+      displayMessage("Mật khẩu không khớp!");
       return;
     }
 
@@ -95,7 +95,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "Sign Up",
+                        "Đăng Ký",
                         style: GoogleFonts.dmSerifDisplay(
                           color: Colors.grey[900],
                           fontSize: 24,
@@ -110,7 +110,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "It's quick and easy.",
+                        "Nhanh chóng và dễ dàng.",
                         style: TextStyle(
                           color: Colors.grey[700],
                           fontSize: 18,
@@ -132,7 +132,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   // Nhập mật khẩu
                   MyTextField(
                     controller: passwordTextController,
-                    hintText: 'Password',
+                    hintText: 'Mật khẩu',
                     obscureText: true,
                   ),
       
@@ -141,7 +141,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   // Xác nhận mật khẩu
                   MyTextField(
                     controller: confirmPasswordTextController,
-                    hintText: 'Confirm Password',
+                    hintText: 'Nhập lại Mật khẩu',
                     obscureText: true,
                   ),
       
@@ -149,7 +149,7 @@ class _RegisterPageState extends State<RegisterPage> {
       
                   MyButtonLogin(
                     onTap: signUp,
-                    text: 'Sign up',
+                    text: 'Đăng ký',
                   ),
       
                   const SizedBox(height: 20),
@@ -158,7 +158,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Already have an account?",
+                        "Bạn đã có tài khoản?",
                         style: TextStyle(
                           color: Colors.grey[700],
                           fontSize: 18,
@@ -168,7 +168,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       GestureDetector(
                         onTap: widget.onTap,
                         child: const Text(
-                          "Login now",
+                          "Đăng nhập",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.blue,
