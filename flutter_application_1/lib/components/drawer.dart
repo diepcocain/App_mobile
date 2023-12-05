@@ -102,32 +102,34 @@ class _MyDrawerState extends State<MyDrawer> {
               ),
             ),
 
+            const SizedBox(height: 100),
+
             // đăng xuất
-            InkWell(
-              onTap: () {
-                signOut();
-              },
-              child: const Padding(
-                padding: EdgeInsets.only(top: 100, left: 10),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.logout,
-                      color: Colors.red,
-                    ),
-                    SizedBox(width: 20),
-                    Text(
-                      'Logout',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 22,
+              InkWell(
+                onTap: () {
+                  signOut();
+                },
+                child: const Padding(
+                  padding: EdgeInsets.only(left: 16),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.logout,
                         color: Colors.red,
                       ),
-                    ),
-                  ],
+                      SizedBox(width: 20),
+                      Text(
+                        'Logout',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22,
+                          color: Colors.red,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
           ],
         ),
       ),

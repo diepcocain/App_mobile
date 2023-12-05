@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 14, bottom: 24),
+              padding: const EdgeInsets.only(top: 20, bottom: 24),
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
@@ -285,7 +285,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 16),
+              padding: const EdgeInsets.only(bottom: 24),
               child: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 16),
                 child: Row(
@@ -298,8 +298,10 @@ class _HomePageState extends State<HomePage> {
                         color: Color(0xFF1D2D50),
                       ),
                     ),
-                    TextButton(
-                      onPressed: () {},
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/promopage');
+                      },
                       child: const Text(
                         "See all",
                         style: TextStyle(

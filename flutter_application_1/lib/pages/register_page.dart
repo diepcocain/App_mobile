@@ -31,7 +31,7 @@ class _RegisterPageState extends State<RegisterPage> {
     if (passwordTextController.text != confirmPasswordTextController.text) {
       Navigator.pop(context);
       // Hiển thị thông báo lỗi
-      displayMessage("Mật khẩu không khớp!");
+      displayMessage("Passwords don't match!");
       return;
     }
 

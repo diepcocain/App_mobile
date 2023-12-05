@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/auth/auth.dart';
 import 'package:flutter_application_1/firebase_options.dart';
 import 'pages/cart_page.dart';
+import 'pages/promo_page.dart';
 
 
 void main() async {
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       home: const AuthPage(),
       routes: {
         "/mycart": (context) => const MyCart(),
+        "/promopage": (context) => const PromoPage(),
       },
     );
   }
